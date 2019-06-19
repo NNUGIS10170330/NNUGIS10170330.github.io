@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 <html>
 
@@ -120,27 +120,27 @@
 
                 <input type="file" id="filemap" onchange="readmap()">
 
-                <input type="button" id="showmap" value="ÏÔÊ¾µØÍ¼£¨Ä«¿¨ÍĞÍ¶Ó°£©" onclick="show_JSMO()"><!--onclick-->
+                <input type="button" id="showmap" value="æ˜¾ç¤ºåœ°å›¾ï¼ˆå¢¨å¡æ‰˜æŠ•å½±ï¼‰" onclick="show_JSMO()"><!--onclick-->
 
             </td>
 
             <td>
 
-                <input type="button" id="S_MO" value="¼ÆËãÃæ»ı" onclick="JS_area()"><!--onclick-->
+                <input type="button" id="S_MO" value="è®¡ç®—é¢ç§¯" onclick="JS_area()"><!--onclick-->
 
-                <input type="button" id="MO_to_Q" value="¼ÆËã¾­Î³¶È-ÏÔÊ¾" onclick="MO_BL_change()"><!--onclick-->
+                <input type="button" id="MO_to_Q" value="è®¡ç®—ç»çº¬åº¦-æ˜¾ç¤º" onclick="MO_BL_change()"><!--onclick-->
 
-                <input type="button" id="S_tixing" value="Íâ½ÓÌİĞÎµÄ¾­Î³¶È×ø±êÃæ»ı" onclick="tryarea()"><!--onclick-->
+                <input type="button" id="S_tixing" value="å¤–æ¥æ¢¯å½¢çš„ç»çº¬åº¦åæ ‡é¢ç§¯" onclick="tryarea()"><!--onclick-->
 
-                <input type="button" id="S_lr" value="¹Ì¶¨Ò»Ìõ¾­ÏßµÄÌİĞÎÃæ»ı»ı·Ö" onclick="left_right()">
+                <input type="button" id="S_lr" value="å›ºå®šä¸€æ¡ç»çº¿çš„æ¢¯å½¢é¢ç§¯ç§¯åˆ†" onclick="left_right()">
 
                 <!--
 
-                ¸ù¾İ½Ç¶ÈµÄÇòÃæ¶à±ßĞÎÃæ»ı=S_BL_area()£¬ÌİĞÎÇòÃæÀÛ¼Ó¶à±ßĞÎÃæ»ı=TXQM()
+                æ ¹æ®è§’åº¦çš„çƒé¢å¤šè¾¹å½¢é¢ç§¯=S_BL_area()ï¼Œæ¢¯å½¢çƒé¢ç´¯åŠ å¤šè¾¹å½¢é¢ç§¯=TXQM()
 
-                ÇòÃæ->Æ½Ãæ=Ãæ»ı=PlanarPolygonAreaMeters2()£¬Íâ½ÓÌİĞÎÃæ»ı=tryarea()
+                çƒé¢->å¹³é¢=é¢ç§¯=PlanarPolygonAreaMeters2()ï¼Œå¤–æ¥æ¢¯å½¢é¢ç§¯=tryarea()
 
-                ¹Ì¶¨Ò»Ìì¾­Ïß½øĞĞ¼ÆËãleft_right()
+                å›ºå®šä¸€å¤©ç»çº¿è¿›è¡Œè®¡ç®—left_right()
 
                 -->
 
@@ -166,31 +166,31 @@
 
     </table>
 
-    <!--	<tr>    <td>ÄÏ¾©ÊĞ</td><td><canvas id="canvas_nanjing" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"Ãæ»ı"</td>       </tr>
+    <!--	<tr>    <td>å—äº¬å¸‚</td><td><canvas id="canvas_nanjing" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"é¢ç§¯"</td>       </tr>
 
-            <tr>    <td>ÎŞÎıÊĞ</td><td><canvas id="canvas_wuxi" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"Ãæ»ı"</td>          </tr>
+            <tr>    <td>æ— é”¡å¸‚</td><td><canvas id="canvas_wuxi" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"é¢ç§¯"</td>          </tr>
 
-            <tr>    <td>ĞìÖİÊĞ</td><td><canvas id="canvas_xuzhou" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"Ãæ»ı"</td>        </tr>
+            <tr>    <td>å¾å·å¸‚</td><td><canvas id="canvas_xuzhou" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"é¢ç§¯"</td>        </tr>
 
-            <tr>    <td>³£ÖİÊĞ</td><td><canvas id="canvas_changzhou" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"Ãæ»ı"</td>     </tr>
+            <tr>    <td>å¸¸å·å¸‚</td><td><canvas id="canvas_changzhou" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"é¢ç§¯"</td>     </tr>
 
-            <tr>    <td>ËÕÖİÊĞ</td><td><canvas id="canvas_suzhou" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"Ãæ»ı"</td>        </tr>
+            <tr>    <td>è‹å·å¸‚</td><td><canvas id="canvas_suzhou" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"é¢ç§¯"</td>        </tr>
 
-            <tr>    <td>ÄÏÍ¨ÊĞ</td><td><canvas id="canvas_nantong" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"Ãæ»ı"</td>       </tr>
+            <tr>    <td>å—é€šå¸‚</td><td><canvas id="canvas_nantong" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"é¢ç§¯"</td>       </tr>
 
-            <tr>    <td>Á¬ÔÆ¸ÛÊĞ</td><td><canvas id="canvas_lianyungang" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"Ãæ»ı"</td> </tr>
+            <tr>    <td>è¿äº‘æ¸¯å¸‚</td><td><canvas id="canvas_lianyungang" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"é¢ç§¯"</td> </tr>
 
-            <tr>    <td>»´°²ÊĞ</td><td><canvas id="canvas_huaian" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"Ãæ»ı"</td>        </tr>
+            <tr>    <td>æ·®å®‰å¸‚</td><td><canvas id="canvas_huaian" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"é¢ç§¯"</td>        </tr>
 
-            <tr>    <td>ÑÎ³ÇÊĞ</td><td><canvas id="canvas_yancheng" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"Ãæ»ı"</td>      </tr>
+            <tr>    <td>ç›åŸå¸‚</td><td><canvas id="canvas_yancheng" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"é¢ç§¯"</td>      </tr>
 
-            <tr>    <td>ÑïÖİÊĞ</td><td><canvas id="canvas_yangzhou" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"Ãæ»ı"</td>      </tr>
+            <tr>    <td>æ‰¬å·å¸‚</td><td><canvas id="canvas_yangzhou" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"é¢ç§¯"</td>      </tr>
 
-            <tr>    <td>Õò½­ÊĞ</td><td><canvas id="canvas_zhenjiang" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"Ãæ»ı"</td>     </tr>
+            <tr>    <td>é•‡æ±Ÿå¸‚</td><td><canvas id="canvas_zhenjiang" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"é¢ç§¯"</td>     </tr>
 
-            <tr>    <td>Ì©ÖİÊĞ</td><td><canvas id="canvas_taizhou" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"Ãæ»ı"</td>       </tr>
+            <tr>    <td>æ³°å·å¸‚</td><td><canvas id="canvas_taizhou" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"é¢ç§¯"</td>       </tr>
 
-            <tr>    <td>ËŞÇ¨ÊĞ</td><td><canvas id="canvas_suqian" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"Ãæ»ı"</td>        </tr>
+            <tr>    <td>å®¿è¿å¸‚</td><td><canvas id="canvas_suqian" width="200"height="20" style="border:1px solid #000000;"></canvas></td><td>"é¢ç§¯"</td>        </tr>
 
     -->
 
@@ -198,33 +198,33 @@
 
     <script type="text/javascript">
 
-		//¶à±ßĞÎÃæ»ı¼ÆËã,13¸öÊĞ
+		//å¤šè¾¹å½¢é¢ç§¯è®¡ç®—,13ä¸ªå¸‚
 
-		//¸ù¾İËù¸øµÄ½­ËÕÊ¡¾³½çÊı¾İ
+		//æ ¹æ®æ‰€ç»™çš„æ±Ÿè‹çœå¢ƒç•Œæ•°æ®
 
-		//1¡¢ÏÔÊ¾²¢¼ÆËã½­ËÕÊ¡Ê®Èı¸öµØÊĞµÄÃæ»ı
+		//1ã€æ˜¾ç¤ºå¹¶è®¡ç®—æ±Ÿè‹çœåä¸‰ä¸ªåœ°å¸‚çš„é¢ç§¯
 
-		//2¡¢±àĞ´Ä«¿¨ÍĞÍ¶Ó°·´Ëã³ÌĞò£¬×ª»»ÉÏÊöÊı¾İÎª¾­Î³¶È×ø±ê£¬²¢ÏÔÊ¾
+		//2ã€ç¼–å†™å¢¨å¡æ‰˜æŠ•å½±åç®—ç¨‹åºï¼Œè½¬æ¢ä¸Šè¿°æ•°æ®ä¸ºç»çº¬åº¦åæ ‡ï¼Œå¹¶æ˜¾ç¤º
 
-		//3¡¢¸ù¾İµØÇòÍÖÇòÌå±íÃæÉÏµÄÌİĞÎÃæ»ı¼ÆËã·½·¨£¬»ùÓÚ¾­Î³¶È×ø±ê¼ÆËã½­ËÕÊ¡Ê®Èı¸öµØÊĞµÄÃæ»ı
+		//3ã€æ ¹æ®åœ°çƒæ¤­çƒä½“è¡¨é¢ä¸Šçš„æ¢¯å½¢é¢ç§¯è®¡ç®—æ–¹æ³•ï¼ŒåŸºäºç»çº¬åº¦åæ ‡è®¡ç®—æ±Ÿè‹çœåä¸‰ä¸ªåœ°å¸‚çš„é¢ç§¯
 
-		var map = new Array();//¼ÇÂ¼µØÍ¼Êı¾İ
+		var map = new Array();//è®°å½•åœ°å›¾æ•°æ®
 
-		var txtstr = "";//¼ÇÂ¼txtÖĞËùÓĞÄÚÈİ
+		var txtstr = "";//è®°å½•txtä¸­æ‰€æœ‰å†…å®¹
 
 		var txtstr_A = new Array();
 
-		var areas = new Array();//¼ÇÂ¼Ãæ»ı
+		var areas = new Array();//è®°å½•é¢ç§¯
 
-		var BL_areas = new Array();//¼ÇÂ¼¾­Î³¶ÈÃæ»ı
+		var BL_areas = new Array();//è®°å½•ç»çº¬åº¦é¢ç§¯
 
-		var map_center = new Array();//¼ÇÂ¼Ã¿¸öÇøÓòµÄÖĞĞÄµã
+		var map_center = new Array();//è®°å½•æ¯ä¸ªåŒºåŸŸçš„ä¸­å¿ƒç‚¹
 
-		var left_right_eare = new Array();//¼ÇÂ¼×óÓÒÃæ»ı
+		var left_right_eare = new Array();//è®°å½•å·¦å³é¢ç§¯
 
-		var lr_x = new Array();//¼ÇÂ¼×î´óÎ³¶ÈºÍ×îĞ¡Î³¶È¶ÔÓ¦µÄ¾«¶È
+		var lr_x = new Array();//è®°å½•æœ€å¤§çº¬åº¦å’Œæœ€å°çº¬åº¦å¯¹åº”çš„ç²¾åº¦
 
-		function readfile(filename, str_A) {//¶ÁÈ¡ÎÄ¼ş
+		function readfile(filename, str_A) {//è¯»å–æ–‡ä»¶
 
 			var reader = new FileReader();
 
@@ -250,11 +250,11 @@
 
 			}
 
-			for (var i = 0; i < txtstr_A.length; i++) {//½«ÎÄ¼ş×ª³ÉÊı×ÖĞÎÊ½
+			for (var i = 0; i < txtstr_A.length; i++) {//å°†æ–‡ä»¶è½¬æˆæ•°å­—å½¢å¼
 
 				if (isNaN(parseInt(txtstr_A[i]))) {//String(txtstr_A[i])==String(txtstr_A[3])
 
-					str_A[i][0] = 999;//Ïß½áÊø
+					str_A[i][0] = 999;//çº¿ç»“æŸ
 
 					continue;
 
@@ -266,9 +266,9 @@
 
 				str_A[i][1] = parseFloat(str_A[i][1]);
 
-				if (isNaN(str_A[i][1])) {//µ±ÓĞĞ©ÕûÊıÊı×ÖÅĞ¶Ï²»³ö£¬ÔÙÒ»´Î¼ì²éÒ»±é
+				if (isNaN(str_A[i][1])) {//å½“æœ‰äº›æ•´æ•°æ•°å­—åˆ¤æ–­ä¸å‡ºï¼Œå†ä¸€æ¬¡æ£€æŸ¥ä¸€é
 
-					str_A[i][0] = -1;//Ïß¿ªÊ¼
+					str_A[i][0] = -1;//çº¿å¼€å§‹
 
 					continue;
 
@@ -276,7 +276,7 @@
 
 				continue;
 
-				//½áÊø³õÊ¼»¯
+				//ç»“æŸåˆå§‹åŒ–
 
 			}
 
@@ -286,7 +286,7 @@
 
 		}
 
-		function readmap() {//µã»÷¡°¶ÁÈ¡ÎÄ¼ş¡±ÊÂ¼ş
+		function readmap() {//ç‚¹å‡»â€œè¯»å–æ–‡ä»¶â€äº‹ä»¶
 
 			var filename = document.getElementById("filemap").files[0];
 
@@ -296,7 +296,7 @@
 
 		}
 
-		function show_JSMO() {//µã»÷¡°ÏÔÊ¾µØÍ¼-Ä«¡±
+		function show_JSMO() {//ç‚¹å‡»â€œæ˜¾ç¤ºåœ°å›¾-å¢¨â€
 
 			readmap();
 
@@ -318,9 +318,9 @@
 
 				}
 
-				if (map[j][0] == 999) {//ÓĞENDÊ±½áÊøµ±Ç°»­Í¼£¬¿ªÊ¼ÏÂÒ»ÌõÏß
+				if (map[j][0] == 999) {//æœ‰ENDæ—¶ç»“æŸå½“å‰ç”»å›¾ï¼Œå¼€å§‹ä¸‹ä¸€æ¡çº¿
 
-					if (map[j + 1][0] == 999) {//ÓĞÁ½¸öEND½áÊø
+					if (map[j + 1][0] == 999) {//æœ‰ä¸¤ä¸ªENDç»“æŸ
 
 						break;
 
@@ -330,13 +330,13 @@
 
 				}
 
-				//¼È²»ÊÇÆğµãÒ²²»ÊÇEND
+				//æ—¢ä¸æ˜¯èµ·ç‚¹ä¹Ÿä¸æ˜¯END
 
 				ctx.lineTo((map[j][0] / 1000 - 12800), 800 - (map[j][1] / 1000 - 3500));
 
 			}
 
-			ctx.strokeStyle = "#000000";//ºÚÉ«
+			ctx.strokeStyle = "#000000";//é»‘è‰²
 
 			ctx.stroke();
 
@@ -346,17 +346,17 @@
 
 		}
 
-		function JS_area() {//¼ÆËã½­ËÕÊ¡Ãæ»ı£¬·´Ó³ÔÚ±í¸ñÖĞ
+		function JS_area() {//è®¡ç®—æ±Ÿè‹çœé¢ç§¯ï¼Œåæ˜ åœ¨è¡¨æ ¼ä¸­
 
 			var kx;
 
 			var ky;
 
-			var A_num = 0;//¼ÇÂ¼µ±Ç°ÊÇÄÄ¸ö
+			var A_num = 0;//è®°å½•å½“å‰æ˜¯å“ªä¸ª
 
-			var S_str = "½­ËÕÊ¡Ãæ»ıÍ³¼Æ\r\n";//¼ÇÂ¼Ãæ»ı×Ö·û´®
+			var S_str = "æ±Ÿè‹çœé¢ç§¯ç»Ÿè®¡\r\n";//è®°å½•é¢ç§¯å­—ç¬¦ä¸²
 
-			for (var j = 0; j < 13; j++) {//³õÊ¼»¯areaÊı×é
+			for (var j = 0; j < 13; j++) {//åˆå§‹åŒ–areaæ•°ç»„
 
 				areas[j] = 0;
 
@@ -378,9 +378,9 @@
 
 				}
 
-				if (map[i][0] == 999) {//ÓĞENDÊ±½áÊøµ±Ç°»­Í¼£¬¿ªÊ¼ÏÂÒ»ÌõÏß
+				if (map[i][0] == 999) {//æœ‰ENDæ—¶ç»“æŸå½“å‰ç”»å›¾ï¼Œå¼€å§‹ä¸‹ä¸€æ¡çº¿
 
-					if (map[i + 1][0] == 999) {//ÓĞÁ½¸öEND½áÊø
+					if (map[i + 1][0] == 999) {//æœ‰ä¸¤ä¸ªENDç»“æŸ
 
 						break;
 
@@ -388,7 +388,7 @@
 
 					areas[A_num] = Math.abs(areas[A_num] / 2);
 
-					S_str = S_str + (A_num + 1) + "  µÄÃæ»ı£º" + areas[A_num] + "\r\n";
+					S_str = S_str + (A_num + 1) + "  çš„é¢ç§¯ï¼š" + areas[A_num] + "\r\n";
 
 					A_num = A_num + 1;
 
@@ -408,21 +408,21 @@
 
 		}
 
-		function MO_BL_change() {//Ä«¿¨ÍĞÍ¶Ó°·´Ëã,¾­Î³¶È×ø±ê,54×ø±êÏµ0.006693421622966
+		function MO_BL_change() {//å¢¨å¡æ‰˜æŠ•å½±åç®—,ç»çº¬åº¦åæ ‡,54åæ ‡ç³»0.006693421622966
 
 			var a = 6378245;
 
 			var b = 6356863.01877;
 
-			var e_2 = 0.006693421622966;//54×ø±êÏµ
+			var e_2 = 0.006693421622966;//54åæ ‡ç³»
 
 			var e2_2 = 0.006738525414684;//e2_2=e'^2
 
-			//80×ø±êÏµ£º0.006694384999588
+			//80åæ ‡ç³»ï¼š0.006694384999588
 
 			var e = Math.sqrt(e_2);
 
-			var BL_str = "54×ø±êÏµÏÂ£º¾­Î³¶È×ø±ê\r\n";//¼ÇÂ¼Ãæ»ı×Ö·û´®
+			var BL_str = "54åæ ‡ç³»ä¸‹ï¼šç»çº¬åº¦åæ ‡\r\n";//è®°å½•é¢ç§¯å­—ç¬¦ä¸²
 
 			var num = 0;
 
@@ -432,15 +432,15 @@
 
 				if (map[i][0] == -1) {
 
-					BL_str = BL_str + "µÚ" + num + "¸ö£º" + "\r\n";
+					BL_str = BL_str + "ç¬¬" + num + "ä¸ªï¼š" + "\r\n";
 
 					continue;
 
 				}
 
-				if (map[i][0] == 999) {//ÓĞENDÊ±½áÊøµ±Ç°»­Í¼£¬¿ªÊ¼ÏÂÒ»ÌõÏß
+				if (map[i][0] == 999) {//æœ‰ENDæ—¶ç»“æŸå½“å‰ç”»å›¾ï¼Œå¼€å§‹ä¸‹ä¸€æ¡çº¿
 
-					if (map[i + 1][0] == 999) {//ÓĞÁ½¸öEND½áÊø
+					if (map[i + 1][0] == 999) {//æœ‰ä¸¤ä¸ªENDç»“æŸ
 
 						break;
 
@@ -470,21 +470,21 @@
 
 			}
 
-			document.getElementById("rr_text").value = "¾­Î³¶ÈÔÚConsoleÖĞ£¡";
+			document.getElementById("rr_text").value = "ç»çº¬åº¦åœ¨Consoleä¸­ï¼";
 
 			console.log(map);
 
 		}
 
-		/*¸ü¾ß½Ç¶ÈµÄ¶à±ßĞÎÃæ»ı*/
+		/*æ›´å…·è§’åº¦çš„å¤šè¾¹å½¢é¢ç§¯*/
 
-		function S_BL_area() {//¸ù¾İ¾­Î³¶ÈËãÃæ»ı-54×ø±êÏµ
+		function S_BL_area() {//æ ¹æ®ç»çº¬åº¦ç®—é¢ç§¯-54åæ ‡ç³»
 
-			var totalAngle = 0;//½Ç¶È
+			var totalAngle = 0;//è§’åº¦
 
-			var totalnum = 0;//¼ÇÂ¼µ±Ç°¶à±ßĞÎÓĞ¼¸¸öµã
+			var totalnum = 0;//è®°å½•å½“å‰å¤šè¾¹å½¢æœ‰å‡ ä¸ªç‚¹
 
-			var totalarea = 0;//µÚ¼¸¸ö¶à±ßĞÎ
+			var totalarea = 0;//ç¬¬å‡ ä¸ªå¤šè¾¹å½¢
 
 			var earthRadiusMeters = 6371000.0;
 
@@ -494,27 +494,27 @@
 
 			var avg_B = 0;
 
-			var R = 0;//Æ½¾ùÎ³È¦°ë¾¶=a*cos(B)/Math.sqrt(1-e2*Math.sin(B)*Math.sin(B))
+			var R = 0;//å¹³å‡çº¬åœˆåŠå¾„=a*cos(B)/Math.sqrt(1-e2*Math.sin(B)*Math.sin(B))
 
 			for (var i = 0; i < map.length - 1; i++) {
 
-				if (map[i][0] == 999) {//µ±i=ENDÊ±
+				if (map[i][0] == 999) {//å½“i=ENDæ—¶
 
-					if (map[i + 1][0] == 999) {//Á½¸öENDÍË³ö
+					if (map[i + 1][0] == 999) {//ä¸¤ä¸ªENDé€€å‡º
 
 						break;
 
 					}
 
-					//¼ÆËãµ±Ç°¶à±ßĞÎÃæ»ı£º
+					//è®¡ç®—å½“å‰å¤šè¾¹å½¢é¢ç§¯ï¼š
 
 					avg_B = avg_B / totalnum * Math.PI / 180;
 
 					R = eartha * Math.cos(avg_B) / Math.sqrt(1 - e2 * Math.sin(avg_B) * Math.sin(avg_B));
 
-					var planarTotalAngle = (totalnum - 2) * Math.PI;//¶à±ßĞÎÄÚ½ÇºÍ
+					var planarTotalAngle = (totalnum - 2) * Math.PI;//å¤šè¾¹å½¢å†…è§’å’Œ
 
-					var sphericalExcess = totalAngle - planarTotalAngle;  //»¡¶È
+					var sphericalExcess = totalAngle - planarTotalAngle;  //å¼§åº¦
 
 					/*
 
@@ -536,13 +536,13 @@
 
 					BL_areas[totalarea] = Math.abs(sphericalExcess / Math.PI * 180 * R);
 
-					//ÖØÖÃÒ»Ğ©Êı¾İ
+					//é‡ç½®ä¸€äº›æ•°æ®
 
-					totalnum = 0;//ÏÂÒ»¸ö¶à±ßĞÎµÄ½ÇµÄÊıÁ¿
+					totalnum = 0;//ä¸‹ä¸€ä¸ªå¤šè¾¹å½¢çš„è§’çš„æ•°é‡
 
-					totalAngle = 0;//ÏÂ¸ö¶à±ßĞÎµÄ¡£¡£¡£
+					totalAngle = 0;//ä¸‹ä¸ªå¤šè¾¹å½¢çš„ã€‚ã€‚ã€‚
 
-					totalarea++;//¶à±ßĞÎÊıÁ¿+1
+					totalarea++;//å¤šè¾¹å½¢æ•°é‡+1
 
 					avg_B = 0;
 
@@ -552,7 +552,7 @@
 
 				}
 
-				if (map[i][0] == -1) {//i+1=Æğµã
+				if (map[i][0] == -1) {//i+1=èµ·ç‚¹
 
 					//   totalAngle+=Angle(map[i+1][0],map[i+1][1],map[i+2][0],map[i+2][1],map[i+3][0],map[i+3][1]);
 
@@ -560,9 +560,9 @@
 
 				}
 
-				if (map[i + 2][0] == 999) {//i+2=ENDÊ±
+				if (map[i + 2][0] == 999) {//i+2=ENDæ—¶
 
-					var a = i - totalnum;//a=µ±Ç°¶à±ßĞÎÆğµã
+					var a = i - totalnum;//a=å½“å‰å¤šè¾¹å½¢èµ·ç‚¹
 
 					avg_B += map[i][1];
 
@@ -574,9 +574,9 @@
 
 				}
 
-				if (map[i + 1][0] == 999) {//i+1=ENDÊ±
+				if (map[i + 1][0] == 999) {//i+1=ENDæ—¶
 
-					var a = i - totalnum;//a=µ±Ç°¶à±ßĞÎÆğµã
+					var a = i - totalnum;//a=å½“å‰å¤šè¾¹å½¢èµ·ç‚¹
 
 					avg_B += map[i][1];
 
@@ -588,7 +588,7 @@
 
 				}
 
-				//Õı³£Çé¿öÏÂ
+				//æ­£å¸¸æƒ…å†µä¸‹
 
 				totalAngle += Angle(map[i][0], map[i][1], map[i + 1][0], map[i + 1][1], map[i + 2][0], map[i + 2][1]);
 
@@ -600,13 +600,13 @@
 
 			console.log(BL_areas);
 
-			//·´Ó³Ãæ»ı±ä»¯
+			//åæ˜ é¢ç§¯å˜åŒ–
 
 			area_BLarea();
 
 		}
 
-		/*½Ç¶È*/
+		/*è§’åº¦*/
 
 		function Angle(p1_x, p1_y, p2_x, p2_y, p3_x, p3_y) {
 
@@ -622,11 +622,11 @@
 
 			}
 
-			return angle * Math.PI / 180;  //»¡¶È
+			return angle * Math.PI / 180;  //å¼§åº¦
 
 		}
 
-		/*·½Ïò*/
+		/*æ–¹å‘*/
 
 		function Bearing(lat1, lon1, lat2, lon2) {
 
@@ -654,31 +654,31 @@
 
 		}
 
-		/*ÌİĞÎÇòÃæÀÛ¼Ó¶à±ßĞÎÃæ»ı*/
+		/*æ¢¯å½¢çƒé¢ç´¯åŠ å¤šè¾¹å½¢é¢ç§¯*/
 
-		function TXQM() {//Î´Íê³É......BL_areas
+		function TXQM() {//æœªå®Œæˆ......BL_areas
 
-			//¼ÇÂ¼Æğµã
+			//è®°å½•èµ·ç‚¹
 
-			var cB;//ÆğÊ¼µãÎ³¶È
+			var cB;//èµ·å§‹ç‚¹çº¬åº¦
 
-			var cL;//ÆğÊ¼µã¾­¶È
+			var cL;//èµ·å§‹ç‚¹ç»åº¦
 
-			var cc_B;//ÖĞµãÎ³¶È
+			var cc_B;//ä¸­ç‚¹çº¬åº¦
 
-			var cc_L;//ÖĞµã¾­¶È
+			var cc_L;//ä¸­ç‚¹ç»åº¦
 
-			var cs = 0;//¼ÇÂ¼Ãæ»ı
+			var cs = 0;//è®°å½•é¢ç§¯
 
-			var B = 0; var L = 0; var dB = 0; var dL = 0;//´«Èë²ÎÊı
+			var B = 0; var L = 0; var dB = 0; var dL = 0;//ä¼ å…¥å‚æ•°
 
-			var cnum = 0;//¼ÇÂ¼µ±Ç°ÊÇµÚ¼¸¸öÃæ»ı
+			var cnum = 0;//è®°å½•å½“å‰æ˜¯ç¬¬å‡ ä¸ªé¢ç§¯
 
 			var pointnum = 0; var centernum = 0;
 
 			var max = 0; var min = 0; var left = 0; var right = 0;
 
-			//³õÊ¼»¯Êı×é
+			//åˆå§‹åŒ–æ•°ç»„
 
 			for (var i = 0; i < areas.length; i++) {
 
@@ -692,11 +692,11 @@
 
 			}
 
-			//¼ÆËãÃ¿¸ö¶à±ßĞÎÖĞµÄÖĞµã
+			//è®¡ç®—æ¯ä¸ªå¤šè¾¹å½¢ä¸­çš„ä¸­ç‚¹
 
 			for (var i = 0; i < map.length; i++) {
 
-				if (map[i][0] == -1) {//¿ªÊ¼
+				if (map[i][0] == -1) {//å¼€å§‹
 
 					max = map[i + 1][1];
 
@@ -710,9 +710,9 @@
 
 				}
 
-				if (map[i][0] == 999) {//µ±Ç°ÇøÓò½áÊø
+				if (map[i][0] == 999) {//å½“å‰åŒºåŸŸç»“æŸ
 
-					//µÃµ½ÖĞµã
+					//å¾—åˆ°ä¸­ç‚¹
 
 					map_center[centernum][0] = (left + right) / 2;
 
@@ -732,7 +732,7 @@
 
 				}
 
-				//ÆÕÍ¨µã
+				//æ™®é€šç‚¹
 
 				if (max < map[i][1]) {
 
@@ -760,7 +760,7 @@
 
 			}
 
-			//ÀÛ¼Æ¼ÆËãÇòÃæÃæ»ı
+			//ç´¯è®¡è®¡ç®—çƒé¢é¢ç§¯
 
 			for (var i = 0; i < map.length; i++) {
 
@@ -776,7 +776,7 @@
 
 				if (map[i][0] == 999) {
 
-					//µ±Ãæ»ı½áÊøÊ±
+					//å½“é¢ç§¯ç»“æŸæ—¶
 
 					BL_areas[cnum] = cs;
 
@@ -796,9 +796,9 @@
 
 				}
 
-				//Á½¸öµã+ÖĞµã
+				//ä¸¤ä¸ªç‚¹+ä¸­ç‚¹
 
-				if (map[i + 1][0] == 999) {//×îºóÒ»¸öµã+Æğµã(i-pointnum)
+				if (map[i + 1][0] == 999) {//æœ€åä¸€ä¸ªç‚¹+èµ·ç‚¹(i-pointnum)
 
 					cc_B = (map[i][1] + map[i - pointnum][1]) / 2;
 
@@ -818,7 +818,7 @@
 
 				}
 
-				//Í¨³£Çé¿öÏÂ
+				//é€šå¸¸æƒ…å†µä¸‹
 
 				cc_B = (map[i][1] + map[i + 1][1]) / 2;
 
@@ -834,7 +834,7 @@
 
 				cs = cs + ccarea(B, L, dB, dL);
 
-				//Ãæ»ı¼ÆËã½áÊøºó
+				//é¢ç§¯è®¡ç®—ç»“æŸå
 
 				pointnum++;
 
@@ -842,17 +842,17 @@
 
 			console.log(BL_areas);
 
-			//ÏÔÊ¾Ãæ»ı²î
+			//æ˜¾ç¤ºé¢ç§¯å·®
 
 			area_BLarea();
 
 		}
 
-		function ccarea(B, L, dB, dL) {//¼ÆËãÌİĞÎÃæ»ıB=¦Õ £¬L=¦Ë £¬dB=Î³¶È±ä»¯£¬dL=¾­¶È±ä»¯
+		function ccarea(B, L, dB, dL) {//è®¡ç®—æ¢¯å½¢é¢ç§¯B=Ï† ï¼ŒL=Î» ï¼ŒdB=çº¬åº¦å˜åŒ–ï¼ŒdL=ç»åº¦å˜åŒ–
 
-			var s;//¼ÇÂ¼µ±Ç°ÇòÃæÌİĞÎÃæ»ı
+			var s;//è®°å½•å½“å‰çƒé¢æ¢¯å½¢é¢ç§¯
 
-			//½Ç¶È×ª»¡¶È
+			//è§’åº¦è½¬å¼§åº¦
 
 			B = B * Math.PI / 180;
 
@@ -862,7 +862,7 @@
 
 			dL = dL * Math.PI / 180;
 
-			//54×ø±êÏµ
+			//54åæ ‡ç³»
 
 			var a = 6378245;
 
@@ -870,7 +870,7 @@
 
 			var e2 = 0.006693421622966;
 
-			//¼ÆËã²ÎÊı
+			//è®¡ç®—å‚æ•°
 
 			var M = a * (1 - e2) / Math.pow(1 - e2 * Math.sin(B) * Math.sin(B), 1.5);
 
@@ -882,7 +882,7 @@
 
 		}
 
-		function findmax(a, b, c, d) {//ÕÒËÄ¸öÖµµÄ×î´óÖµ
+		function findmax(a, b, c, d) {//æ‰¾å››ä¸ªå€¼çš„æœ€å¤§å€¼
 
 			var max = a;
 
@@ -908,7 +908,7 @@
 
 		}
 
-		function findmin(a, b, c, d) {//ÕÒËÄ¸öÖµµÄ×îĞ¡Öµ
+		function findmin(a, b, c, d) {//æ‰¾å››ä¸ªå€¼çš„æœ€å°å€¼
 
 			var min = a;
 
@@ -934,15 +934,15 @@
 
 		}
 
-		function area_BLarea() {//·´Ó³Æ½Ãæ-ÇòÃæ
+		function area_BLarea() {//åæ˜ å¹³é¢-çƒé¢
 
 			//BL_area
 
-			var str2 = "Æ½Ãæ-ÇòÃæÍâ½ÓÌİĞÎÃæ»ıµÄ²î(area-BL_areas)£¨Æ½·½Ç§Ã×£©£º\r\n";
+			var str2 = "å¹³é¢-çƒé¢å¤–æ¥æ¢¯å½¢é¢ç§¯çš„å·®(area-BL_areas)ï¼ˆå¹³æ–¹åƒç±³ï¼‰ï¼š\r\n";
 
 			for (var i = 0; i < BL_areas.length; i++) {
 
-				str2 = str2 + "µÚ" + i + "¸ö£º" + (areas[i] - BL_areas[i]) / 1000000 + "\r\n";
+				str2 = str2 + "ç¬¬" + i + "ä¸ªï¼š" + (areas[i] - BL_areas[i]) / 1000000 + "\r\n";
 
 			}
 
@@ -954,13 +954,13 @@
 
 		function area_lrarea() {
 
-			//¼ÆËã»ı·ÖÌİĞÎµÄÃæ»ı²î
+			//è®¡ç®—ç§¯åˆ†æ¢¯å½¢çš„é¢ç§¯å·®
 
-			var str1 = "Æ½Ãæ-ÇòÃæÌİĞÎÀÛ¼ÓÃæ»ıµÄ²î£¨area-left_right_eare£©(Æ½·½Ç§Ã×)£º\r\n";
+			var str1 = "å¹³é¢-çƒé¢æ¢¯å½¢ç´¯åŠ é¢ç§¯çš„å·®ï¼ˆarea-left_right_eareï¼‰(å¹³æ–¹åƒç±³)ï¼š\r\n";
 
 			for (var i = 0; i < areas.length; i++) {
 
-				str1 = str1 + "µÚ" + i + "¸ö£º" + (areas[i] - left_right_eare[i]) / 1000000 + "\r\n";
+				str1 = str1 + "ç¬¬" + i + "ä¸ªï¼š" + (areas[i] - left_right_eare[i]) / 1000000 + "\r\n";
 
 			}
 
@@ -970,7 +970,7 @@
 
 		}
 
-		/*ÇòÃæ->Æ½Ãæ=Ãæ»ı*/
+		/*çƒé¢->å¹³é¢=é¢ç§¯*/
 
 		function PlanarPolygonAreaMeters2() {
 
@@ -980,7 +980,7 @@
 
 			var metersPerDegree = 2.0 * Math.PI * 6378245 / 360.0;
 
-			var mapnum = 0;//¼ÇÂ¼ÊÇµ±Ç°ÇøÓòµÄµÚ¼¸¸öµã
+			var mapnum = 0;//è®°å½•æ˜¯å½“å‰åŒºåŸŸçš„ç¬¬å‡ ä¸ªç‚¹
 
 			var ppnum = 0;
 
@@ -1012,7 +1012,7 @@
 
 				}
 
-				if (map[i + 1][0] == 999) {//×îºóÒ»¸öÓĞĞ§µã
+				if (map[i + 1][0] == 999) {//æœ€åä¸€ä¸ªæœ‰æ•ˆç‚¹
 
 					xi = map[i][0] * metersPerDegree * Math.cos(map[i][1] * Math.PI / 180.0);
 
@@ -1026,7 +1026,7 @@
 
 				}
 
-				//Í¨³£µã
+				//é€šå¸¸ç‚¹
 
 				xi = map[i][0] * metersPerDegree * Math.cos(map[i][1] * Math.PI / 180.0);
 
@@ -1042,7 +1042,7 @@
 
 			}
 
-			//·´Ó³±ä»¯
+			//åæ˜ å˜åŒ–
 
 			console.log(BL_areas);
 
@@ -1050,19 +1050,19 @@
 
 		}
 
-		/*Íâ½ÓÌİĞÎÃæ»ı*/
+		/*å¤–æ¥æ¢¯å½¢é¢ç§¯*/
 
-		function tryarea() {//²âÊÔ
+		function tryarea() {//æµ‹è¯•
 
-			//Íâ½ÓÌİĞÎÃæ»ı
+			//å¤–æ¥æ¢¯å½¢é¢ç§¯
 
-			//¼ÇÂ¼Æğµã
+			//è®°å½•èµ·ç‚¹
 
-			var cnum = 0;//¼ÇÂ¼µ±Ç°ÊÇµÚ¼¸¸öÃæ»ı
+			var cnum = 0;//è®°å½•å½“å‰æ˜¯ç¬¬å‡ ä¸ªé¢ç§¯
 
 			var max = 0; var min = 0; var left = 0; var right = 0;
 
-			//ÀÛ¼Æ¼ÆËãÇòÃæÃæ»ı
+			//ç´¯è®¡è®¡ç®—çƒé¢é¢ç§¯
 
 			for (var i = 0; i < map.length; i++) {
 
@@ -1082,7 +1082,7 @@
 
 				if (map[i][0] == 999) {
 
-					//µ±Ãæ»ı½áÊøÊ±
+					//å½“é¢ç§¯ç»“æŸæ—¶
 
 					BL_areas[cnum] = ccarea(min, left, max - min, right - left);
 
@@ -1098,7 +1098,7 @@
 
 				}
 
-				//Í¨³£Çé¿öÏÂ
+				//é€šå¸¸æƒ…å†µä¸‹
 
 				if (max < map[i][1]) {
 
@@ -1124,25 +1124,25 @@
 
 				}
 
-				//Ãæ»ı¼ÆËã½áÊøºó
+				//é¢ç§¯è®¡ç®—ç»“æŸå
 
 			}
 
 			console.log(BL_areas);
 
-			//ÏÔÊ¾Ãæ»ı²î
+			//æ˜¾ç¤ºé¢ç§¯å·®
 
 			area_BLarea();
 
-			//¼ÆËã×ÜÃæ»ı
+			//è®¡ç®—æ€»é¢ç§¯
 
 			conarea();
 
 		}
 
-		function left_right() {//¹Ì¶¨Ò»Ìõ¾­Ïß
+		function left_right() {//å›ºå®šä¸€æ¡ç»çº¿
 
-			//³õÊ¼»¯left_right_eareÃæ»ı
+			//åˆå§‹åŒ–left_right_eareé¢ç§¯
 
 			for (var i = 0; i < areas.length; i++) {
 
@@ -1150,7 +1150,7 @@
 
 			}
 
-			//³õÊ¼»¯lr_x,0=min,1=max,2=right
+			//åˆå§‹åŒ–lr_x,0=min,1=max,2=right
 
 			for (var i = 0; i < areas.length; i++) {
 
@@ -1164,7 +1164,7 @@
 
 			}
 
-			//ÕÒlr_x
+			//æ‰¾lr_x
 
 			var lr_num = 0;
 
@@ -1226,7 +1226,7 @@
 
 				}
 
-				if (map[i][0] > lr_x[lr_num][2]) {//¼ÇÂ¼rightÖµ
+				if (map[i][0] > lr_x[lr_num][2]) {//è®°å½•rightå€¼
 
 					lr_x[lr_num][2] = map[i][0];
 
@@ -1236,11 +1236,11 @@
 
 			console.log(lr_x);
 
-			//¼ÆËãÃæ»ı
+			//è®¡ç®—é¢ç§¯
 
 			lr_num = 0;
 
-			var snum = 0;//ÓĞ¼¸¿éÃæ»ı
+			var snum = 0;//æœ‰å‡ å—é¢ç§¯
 
 			var Boundary = 0;
 
@@ -1270,7 +1270,7 @@
 
 				}
 
-				//iºÍi+1,ccarea(B,L,dB,dL)
+				//iå’Œi+1,ccarea(B,L,dB,dL)
 
 				if (map[i][0] <= Boundary && map[i + 1][0] <= Boundary) {//++
 
@@ -1296,7 +1296,7 @@
 
 			console.log(left_right_eare);
 
-			//·´Ó³Ò»Ğ©Ãæ»ı²î
+			//åæ˜ ä¸€äº›é¢ç§¯å·®
 
 			area_lrarea();
 
@@ -1304,9 +1304,9 @@
 
 		}
 
-		function conarea() {//¶Ô±ÈÒ»Ğ©Ãæ»ı
+		function conarea() {//å¯¹æ¯”ä¸€äº›é¢ç§¯
 
-			var s_tp = 0;//Í¶Ó°ÏÂµÄÃæ»ı
+			var s_tp = 0;//æŠ•å½±ä¸‹çš„é¢ç§¯
 
 			for (var i = 0; i < areas.length; i++) {
 
@@ -1314,7 +1314,7 @@
 
 			}
 
-			alert("areas£¨Æ½·½Ç§Ã×£©:" + s_tp);
+			alert("areasï¼ˆå¹³æ–¹åƒç±³ï¼‰:" + s_tp);
 
 			s_tp = 0;
 
@@ -1324,7 +1324,7 @@
 
 			}
 
-			alert("left_right_eare£¨Æ½·½Ç§Ã×£©:" + s_tp);
+			alert("left_right_eareï¼ˆå¹³æ–¹åƒç±³ï¼‰:" + s_tp);
 
 			s_tp = 0;
 
@@ -1334,7 +1334,7 @@
 
 			}
 
-			alert("BL_areas£¨Æ½·½Ç§Ã×£©:" + s_tp);
+			alert("BL_areasï¼ˆå¹³æ–¹åƒç±³ï¼‰:" + s_tp);
 
 		}
 
