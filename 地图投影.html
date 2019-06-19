@@ -1,0 +1,75 @@
+
+<html>  
+    <head>  
+        <title>地图投影</title>  
+    </head>  
+        <body>             
+            <input id="fileInput" type="file" onchange="processFiles()"/>
+            <br>
+            <canvas id="myCanvas" width="1400" height="700" style="border:1px solid #686abd">your browser does not support the canvas tag </canvas>
+            
+            <script> 
+            function processFiles(){
+                var file=document.getelementbyid("fileInput").files[0];
+                var reader=new filereader();
+                reader.readastext(file);
+                reader.onload=function(e)
+                {
+                    var str=this.result;
+                    number=digitalectraction(str,number);
+                    var heap=str.replace(/[^0-9,eEND-]/ig,"A");
+                    heap=heap.replace(/[^0-9.eA-]/ig,"L");
+
+                    var numcharacter="";
+                    var number=new Array();
+                    var i=0;
+                    var flag=1;
+                    var n=0;
+                    var character=heap[flag];
+                    var numline=1;
+                    var isend=0;
+                    number[i++]=-1;
+
+                    while (character!=null){
+                        if(character=="L"){
+                            isend=1;
+                            numline++;
+                            number[i++]=-1;
+                        }
+                        if(numline<10 && isend){
+                            flag+=4;
+                            character=heap[flag];
+                            isend=0;
+                        }
+                        if(9<numline<100 && isend){
+                            flag+=5;
+                            character=heap[flag];
+                            isend=0;
+                        }
+                        if(99<numline<1000 && isend){
+                            flag+=6;
+                            character=heap[flag];
+                            isend=0;
+                        }
+                        if(999<numline<10000 && isend){
+                            flag+=7;
+                            character=heap[flag];
+                            isend=0;
+                        }
+                        if(character!="A"){
+                            n=1;
+                            numcharcater+=character;
+                        }else{
+                            if(n){
+                                number[i++]=parsefloat(numcharacter);
+                                numcharacter="";
+                                n=0;
+                            }
+                        }
+                        character=heap[++flag];
+                }
+            }
+        }
+        </script>   
+        </body>  
+<html>
