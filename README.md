@@ -1,3 +1,3 @@
-10170330邱思豪 GIS算法基础作业
+# 10170330 邱思豪 GIS算法基础作业
 =================
-###[跳马](https://NNUGIS10170330.github.io/跳马.html)
+### [跳马] (https://NNUGIS10170330.github.io/跳马.html)
